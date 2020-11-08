@@ -1,18 +1,18 @@
 // 定义 Github 项目，文章会从这里读取
-const github_base = "kasuganosoras/frp-blog";
+const github_base = "apayllc/payvin";
 
 // 设置站点信息
-var default_title	 = "SakuraFrp Blog - 樱花内网穿透官方博客";					// 站点标题（显示在浏览器标题栏）
-var default_intitle	 = "SakuraFrp Blog";								// 站点名称（显示在首页）
-var default_description  = "欢迎访问 Sakura Frp 官方博客，本博客分享与 Frp 相关的技术以及记录一些日常。"; 	// 站点简介，有利于 SEO
-var site_domain		 = "blog.natfrp.org";								// 站点域名
-var site_subtitle	 = "樱花内网穿透官方博客";							// 站点副标题
-var site_favicon	 = "https://cdn.zerodream.net/gitea/img/favicon.png";				// 站点 Logo
+var default_title	 = "PayVin记账";					// 站点标题（显示在浏览器标题栏）
+var default_intitle	 = "PayVin记账";								// 站点名称（显示在首页）
+var default_description  = "D0支付,支付宝转卡,微信H5支付,支付宝H5支付。"; 	// 站点简介，有利于 SEO
+var site_domain		 = "www.pay.vin";								// 站点域名
+var site_subtitle	 = "实时代付API接口（三要素代付），支付宝H5（卡密），微信H5（话费直冲），联通充值卡回收，三方支付进件开户，美国公司注册";							// 站点副标题
+var site_favicon	 = "https://i.loli.net/2020/11/08/YbtBjkCH9hzWEde.jpg";				// 站点 Logo
 
 // 博主信息
-var owner_name = "Akkariin";									// 博主名字
-var owner_logo = "https://secure.gravatar.com/avatar/80962ca1ced98d0e679b2bc315d049f2?s=256"	// 博主头像
-var owner_desc = "鸽子王/咸鱼/phper，日常水贴摸鱼，佛系出租服务器";					// 博主简介
+var owner_name = "Sam";									// 博主名字
+var owner_logo = "https://i.loli.net/2020/11/08/YbtBjkCH9hzWEde.jpg"	// 博主头像
+var owner_desc = "专注免签支付技术开发团队,提供高效快速可靠的服务 ";					// 博主简介
 
 // 设置站点资源文件地址
 var css_bootstrap	 = "https://cdn.zerodream.net/css/bootstrap.min.css";		// Boostrap css 文件地址
@@ -38,11 +38,11 @@ addEventListener('fetch', event => {
 });
 
 var header = `<!DOCTYPE HTML>
-<!-- 由 CloudFlare Workers Blog 强力驱动 -->
+<!-- 由 CloudFlare Workers强力驱动 -->
 <!-- SakuraFrp Blog 模板 1.0 by Akkariin -->
 <html lang="zh_CN">
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=11">
 		<meta name="application-name" content="SakuraFrp Blog">
@@ -53,15 +53,15 @@ var header = `<!DOCTYPE HTML>
 		<link rel="stylesheet" href="${css_hljs_github}">
 		<title>{title}{title_2}</title>
 		<style type="text/css">.pageid{margin-bottom:-26px}code{color:#484848;background-color:#f5f5f5;border-radius:0px;border:1px solid #dadada;}pre>code{color:unset;background-color:unset;border-radius:unset;border:0px;}.post-a {color: #000;text-decoration: none ! important;}.post-box {padding: 12px 20px 12px 20px;border-bottom: 1px solid rgba(0,0,0,0.07);cursor: pointer;border-left: 0px solid rgba(66, 66, 66, 0);transition-duration: 0.3s;}.post-box:hover {transition-duration: 0.3s;border-left: 5px solid rgba(66, 66, 66, 0.15);}.thread h2 {border-bottom: 1px solid rgb(238,238,238);padding-bottom: 10px;}.editor-preview pre, .editor-preview-side pre{padding: 0.5em;}.hljs{background: unset ! important;padding: 0px;}.CodeMirror{height: calc(100% - 320px);min-height: 360px;}.msgid{font-family:Consolas;}.tooltip {word-break: break-all;}h2 a{font-weight: 400;}body{/*background:url(https://i.natfrp.org/cbf5973ce9da283bc9abe307cdea7f30.jpg);*/font-family:'-apple-system','BlinkMacSystemFont','Segoe UI','Helvetica','Arial','sans-serif','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol' ! important;font-weight:400;background-attachment:fixed;background-size:cover;background-repeat:no-repeat;background-position:center;}h2 a{color: #000;} h2 a:hover{color: #000; text-decoration: none;}.full-width{width: 100%;}.thread img{vertical-align:text-bottom ! important;max-width:100% ! important;margin-top:8px;margin-bottom:8px;}.thread table{display:block;width:100%;overflow:auto;margin-bottom:8px;}.thread table tr{background-color:#fff;border-top:1px solid #c6cbd1;}.thread table tr:nth-child(2n){background-color:#f7f7f7;}.thread table th,.thread table td{padding:10px 12px 0px 12px;border:1px solid #dfe2e5;font-size:14px;}.thread table th {padding-bottom: 10px;background: #f7f7f7;}.thread pre{margin-bottom:16px;}pre{border:none ! important;}blockquote{font-size:15px ! important;}@media screen and(max-width:768px){.copyright{text-align:center;}}</style>
-		<script>
-			var _hmt = _hmt || [];
-			(function() {
-			var hm = document.createElement("script");
-			hm.src = "https://hm.baidu.com/hm.js?b1f3cc985ea87c4141634fa0572a1612";
-			var s = document.getElementsByTagName("script")[0]; 
-			s.parentNode.insertBefore(hm, s);
-			})();
-		</script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151489502-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-151489502-2');
+</script>	
 	</head>
 	<body>
 		<div class="container">
@@ -303,16 +303,16 @@ async function bloghandle(request) {
 						<p class="text-left">${owner_desc}</p>
 						<hr>
 						<div class="text-left">
-							<h4>友情链接</h4>
-							<p><a href="https://www.natfrp.org/" target="_blank">Sakura Frp</a></p>
+							<h4>Telegram联系我们</h4>
+							<p><a href="https://t.me/Apollosoftllc" target="_blank">Sam DCohen</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
-				<p>Powered by CloudFlare Workers | <a href="https://github.com/kasuganosoras/cloudflare-worker-blog" target="_blank">Github</a></p>
-				<p>&copy; 2019 ${default_intitle}</p>
+				<p>Powered by CloudFlare Workers | Github</p>
+				<p>&copy; 2018-2020 ${default_intitle}</p>
 				<br><br>
 				</div>
 			</div>
